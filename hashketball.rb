@@ -223,7 +223,7 @@ def winning_team
     end
   end
   point_totals = points_array.collect do |indiv_points_array|
-    indiv_points_array.sum
+    indiv_points_array.inject(0){ |sum, x| sum + x }
   end
   binding.pry
 end
