@@ -240,3 +240,5 @@ def player_with_longest_name
     end
   end
   names = names.sort_by {|name| name.length}
+  return names[-1]
+end
