@@ -177,8 +177,8 @@ def player_stats (player_name)
 end
 
 def shoe_sizes
-  game_hash.each do |team_role, team_data|
-    team_data[:players].collect do |player, data|
+  game_hash.collect do |team_role, team_data|
+    team_data[:players].each do |player, data|
       data[:shoe]
       # binding.pry
     end
