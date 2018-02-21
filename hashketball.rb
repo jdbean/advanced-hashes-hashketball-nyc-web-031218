@@ -232,4 +232,12 @@ def winning_team
   end
 end
 
-
+def player_with_longest_name
+  names = []
+  game_hash.each do |team_role, team_data|
+    team_data[:players].each do |player, data|
+      names << player
+    end
+  end
+  names = names.sort_by {|name| name.length}
+    
