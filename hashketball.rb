@@ -201,3 +201,18 @@ def big_shoe_rebounds
     end
   end
 end
+
+def most_points_scored
+  points_array = game_hash.collect do |team_role, team_data|
+    team_data[:players].collect do |player, data|
+      data[:points]
+    end
+  end
+  highest_points = points_array.flatten.sort[-1]
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |player, data|
+      if data[:shoe] == highest_points
+        return player
+      end
+  
+end
