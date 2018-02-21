@@ -186,9 +186,7 @@ end
 
 
 def biggest_shoe
-  binding.pry
   biggest_shoe = shoe_sizes.flatten.sort[-1]
-  binding.pry
 end
 
 
