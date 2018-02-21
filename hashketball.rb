@@ -214,5 +214,6 @@ def most_points_scored
       if data[:shoe] == highest_points
         return player
       end
-  
+    end
+  end
 end
