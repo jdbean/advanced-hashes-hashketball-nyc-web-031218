@@ -189,7 +189,7 @@ shoe_sizes
 
 def biggest_shoe
   binding.pry
-  biggest_shoe = shoe_sizes.sort[-1]
+  biggest_shoe = shoe_sizes.sort.flatten[-1]
   binding.pry
 end
 
