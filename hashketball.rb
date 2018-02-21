@@ -180,12 +180,10 @@ def shoe_sizes
   game_hash.collect do |team_role, team_data|
     team_data[:players].collect do |player, data|
       data[:shoe]
-      # binding.pry
     end
   end
 end
 
-shoe_sizes
 
 def biggest_shoe
   binding.pry
@@ -193,7 +191,6 @@ def biggest_shoe
   binding.pry
 end
 
-biggest_shoe
 
 def big_shoe_rebounds
   game_hash.each do |location, team_data|
