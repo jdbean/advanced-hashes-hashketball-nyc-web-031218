@@ -225,5 +225,7 @@ def winning_team
   point_totals = points_array.collect do |indiv_points_array|
     indiv_points_array.sum
   end
-
+  binding.pry
 end
+
+winning_team
