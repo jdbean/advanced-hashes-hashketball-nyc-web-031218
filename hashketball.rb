@@ -223,9 +223,13 @@ def winning_team
     end
   end
   point_totals = points_array.collect do |indiv_points_array|
-    indiv_points_array.inject(0){ |sum, x| sum + x }
+    indiv_points_array.inject(0) { |sum, x| sum + x }
   end
   binding.pry
+  if point_totals[0] >= point_totals[1]
+    return game_hash[:home][:team_name]
+  else
+    return game_hash[:away][:team_name]
 end
 
 winning_team
