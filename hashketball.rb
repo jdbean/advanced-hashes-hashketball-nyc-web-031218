@@ -215,3 +215,15 @@ def most_points_scored
     end
   end
 end
+
+def winning_team
+  points_array = game_hash.collect do |team_role, team_data|
+    team_data[:players].collect do |player, data|
+      data[:points]
+    end
+  end
+  point_totals = points_array.collect do |indiv_points_array|
+    indiv_points_array.sum
+  end
+
+end
